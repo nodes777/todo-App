@@ -23,7 +23,8 @@ var app = app || {};
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
 			'blur .edit': 'close',
-			'click .edit-btn': 'edit'
+			'click .edit-btn': 'edit',
+			'click .priority-btn': 'prioritize'
 		},
 
 		// The TodoView listens for changes to its model, re-rendering. Since
@@ -75,6 +76,9 @@ var app = app || {};
 		edit: function () {
 			this.$el.addClass('editing');
 			this.$input.focus();
+		},
+		prioritize: function(){
+			this.$el.addClass('priority');
 		},
 
 		// Close the `"editing"` mode, saving changes to the todo.
