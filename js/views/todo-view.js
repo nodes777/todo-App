@@ -78,7 +78,7 @@ var app = app || {};
 			this.$input.focus();
 		},
 		prioritize: function(){
-			this.$el.addClass('priority');
+			this.$el.toggleClass('priority');
 		},
 
 		// Close the `"editing"` mode, saving changes to the todo.
